@@ -24,6 +24,22 @@ terraform apply -auto-approve
 
 ```
 
+## Connect to GKE cluster
+
+```cmd
+
+gcloud container clusters get-credentials <GKEClusterName> --region asia-southeast1 --project <ProjectName>
+
+```
+
+## Connect to GKE cluster
+
+```cmd
+
+git clone https://github.com/stegacteam/appdemo
+
+```
+
 ## Create Namespace, market-demo
 
 ```bash
