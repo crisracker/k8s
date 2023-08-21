@@ -52,6 +52,8 @@ kubectl create ns market-demo
 
 ```bash
 
+cd appdemo
+
 #kubectl apply --recursive --filename
 #kubectl apply --recursive -f <Folder>
 
