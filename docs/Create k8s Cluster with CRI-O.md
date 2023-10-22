@@ -94,10 +94,10 @@ A container runtime is the software that is responsible for running the containe
 
 Supported container runtimes are:
 
-[Docker Engine] (https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker) (Not Recommended - Dockershim has been removed from the Kubernetes project as of release 1.24)
-[CRI-O] (https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cri-o)
-[Containerd] (https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd)
-[Mirantis Container Runtime] (https://kubernetes.io/docs/setup/production-environment/container-runtimes/#mcr)
+[Docker Engine](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker)
+[CRI-O](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cri-o)
+[Containerd](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd)
+[Mirantis Container Runtime](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#mcr)
 
 **Note:**
 Kubernetes releases before v1.24 included a direct integration with Docker Engine, using a component named dockershim. That special direct integration is no longer part of Kubernetes (this removal was announced as part of the v1.20 release).
