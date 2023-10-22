@@ -95,8 +95,11 @@ A container runtime is the software that is responsible for running the containe
 Supported container runtimes are:
 
 [Docker Engine](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker)
+
 [CRI-O](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cri-o)
+
 [Containerd](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd)
+
 [Mirantis Container Runtime](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#mcr)
 
 **Note:**
