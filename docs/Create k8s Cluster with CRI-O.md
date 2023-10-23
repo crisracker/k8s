@@ -229,10 +229,11 @@ Login to the server to be used as master and make sure that the br_netfilter mod
 ```cmd
 
 lsmod | grep br_netfilter
-br_netfilter           28672  0
-bridge                249856  1 br_netfilter
 
 ```
+
+br_netfilter           28672  0
+bridge                249856  1 br_netfilter
 
 Let us also enable the kubelet service to start on boot.
 
