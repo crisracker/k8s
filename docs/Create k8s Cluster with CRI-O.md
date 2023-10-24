@@ -361,13 +361,21 @@ Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
 
+'''cmd
+  
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
+```
+
 Alternatively, if you are the root user, you can run:
 
+```cmd
+
   export KUBECONFIG=/etc/kubernetes/admin.conf
+
+```
 
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
@@ -375,8 +383,12 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
+```cmd
+
 kubeadm join 10.148.0.5:6443 --token vbjfm4.w2uiwqfvt7pqcban \
         --discovery-token-ca-cert-hash sha256:2a28796a4a0569118a1b6af689c410ce42be99a6853b1989ed0d90228017ad67
+
+```
 
 ### 7. Scheduling pods on Master
 By default, your Kubernetes Cluster will not schedule pods on the control-plane node for security reasons. It is recommended you keep it this way, but for test environments or if you are running a single node cluster, you may want to schedule Pods on control-plane node to maximize resource usage.
