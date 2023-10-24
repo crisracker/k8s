@@ -485,5 +485,22 @@ kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-7c658794b9-t2fkc   1/1     Running   0          4m39s
 
+### 11. RBAC
+
+Add Role
+```cmd
+
+kubectl label node <node name> node-role.kubernetes.io/<role name>=<key>
+
+```
+
+Remove Role
+
+```cmd
+
+kubectl label node <node name> node-role.kubernetes.io/<role name>-
+
+```
+
 ### Conclusion
 In this guide we managed to set up a kubernetes server on an Ubuntu 22.04 server. You can now deploy apps in it.
