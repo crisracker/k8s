@@ -493,6 +493,12 @@ kubectl expose pod nginx --type=NodePort --port 80
 
 ```
 
+```cmd
+
+kubectl get svc nginx
+
+```
+
 ### 11. RBAC
 
 Add Role
