@@ -485,6 +485,14 @@ kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-7c658794b9-t2fkc   1/1     Running   0          4m39s
 
+Expose the Pod
+
+```cmd
+
+kubectl expose pod nginx --type=NodePort --port 80
+
+```
+
 ### 11. RBAC
 
 Add Role
