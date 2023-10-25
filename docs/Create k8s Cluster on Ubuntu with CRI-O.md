@@ -205,7 +205,7 @@ We can now install CRI-O after ensuring that our repositories are up to date.
 ```cmd
 
 sudo apt update
-sudo apt install cri-o cri-o-runc
+sudo apt-get install cri-o cri-o-runc cri-tools -y
 
 ```
 
