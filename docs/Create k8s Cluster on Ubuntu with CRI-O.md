@@ -151,9 +151,9 @@ sudo -i
 
 Some parameters we need:
 
-*OS=xUbuntu_22.04*
+*OS=xUbuntu_20.04*
 
-*VERSION=1.28*
+*VERSION=1.26*
 
 |OS Version   | $OS          |
 |:-----------:|:------------:|
