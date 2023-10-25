@@ -1,4 +1,4 @@
-# Create k8s Cluster with CRI-O 
+# Create k8s Cluster on Ubuntu with CRI-O 
 
 ## In this demo, I be using 1 Master and 2 Worker nodes
 
