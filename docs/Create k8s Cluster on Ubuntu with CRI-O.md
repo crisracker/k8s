@@ -408,7 +408,7 @@ Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
 
-'''cmd
+```cmd
   
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
