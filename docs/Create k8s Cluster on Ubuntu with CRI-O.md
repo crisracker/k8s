@@ -64,15 +64,23 @@ Confirm the installation by checking the version of kubectl.
 
 ```cmd
 
-kubectl version -o yaml && kubeadm version -o yaml
+kubectl version -o yaml
+kubeadm version -o yaml
 
 ```
 
 You will see somthing like this:
 
-Client Version: v1.28.2
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-kubeadm version: &version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.2", GitCommit:"89a4ea3e1e4ddd7f7572286090359983e0387b2f", GitTreeState:"clean", BuildDate:"2023-09-13T09:34:32Z", GoVersion:"go1.20.8", Compiler:"gc", Platform:"linux/amd64"}
+clientVersion:
+  buildDate: "2023-09-13T11:31:28Z"
+  compiler: gc
+  gitCommit: d1483fdf7a0578c83523bc1e2212a606a44fd71d
+  gitTreeState: clean
+  gitVersion: v1.26.9
+  goVersion: go1.20.8
+  major: "1"
+  minor: "26"
+  platform: linux/amd64
 
 ### 3. Disable Swap and Enable Kernel modules
 Use this command to turn off swap
