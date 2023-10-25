@@ -332,8 +332,11 @@ sudo vim /etc/hosts
 ```
 
 10.148.0.3 k8s-node1
+
 10.148.0.4 k8s-node2
+
 10.148.0.5 k8s-master
+
 
 Now create the cluster
 
