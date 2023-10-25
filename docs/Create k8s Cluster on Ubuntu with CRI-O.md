@@ -199,6 +199,14 @@ sudo apt install cri-o cri-o-runc
 
 ```
 
+If you trust the software that you are installing using apt, you can actually bypass the authentication safety measures and allow the package to be installed using the additional flag
+
+```cmd
+
+sudo apt update --allow-unauthenticated
+
+```
+
 To confirm the installed version, use this command:
 
 ```cmd
