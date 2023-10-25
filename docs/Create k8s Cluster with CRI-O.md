@@ -463,6 +463,36 @@ kubeadm join 10.148.0.5:6443 --token vbjfm4.w2uiwqfvt7pqcban \
 
 ```
 
+Do the below ONLY if you want to run KUBCTL from worker nodes
+
+Add local user to worker
+
+```cmd
+
+adduser <username>
+
+```
+
+Update config file
+
+```cmd
+
+vi /etc/ssh/sshd_config
+
+```
+
+PasswordAuthentication --> change to Yes
+
+restart service -- > systemctl restart sshd
+
+Copy admin.conf from Master to Worker node
+
+```cmd
+
+sudo scp admin.conf chris@k8s-worker1:/home/chris
+
+```
+
 ### 10. Deploying an application
 Deploy sample Nginx application
 
