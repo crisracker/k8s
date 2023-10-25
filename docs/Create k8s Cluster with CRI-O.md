@@ -29,8 +29,34 @@ Then install the required packages.
 ```cmd
 
 sudo apt update
-sudo apt -y install vim git curl wget kubelet kubeadm kubectl
+sudo apt -y install vim git curl wget kubelet=1.26.9-00 kubeadm=1.26.9-00 kubectl=1.26.9-00
 sudo apt-mark hold kubelet kubeadm kubectl
+
+```
+
+To install a certain version of kubernetes
+
+List the kube version from the repos
+
+```cmd
+
+apt list -a kubeadm
+
+```
+
+Install a specific version
+
+```cmd
+
+apt install -y kubeadm=<version> kubelet=<version> kubectl=<version>
+
+```
+
+To downgrade the kubernetes version
+
+```cmd
+
+sudo apt -y install vim git curl wget kubelet=1.26.9-00 kubeadm=1.26.9-00 kubectl=1.26.9-00 --allow-downgrades --allow-change-held-packages
 
 ```
 
@@ -38,7 +64,7 @@ Confirm the installation by checking the version of kubectl.
 
 ```cmd
 
-kubectl version --client && kubeadm version
+kubectl version -o yaml && kubeadm version -o yaml
 
 ```
 
