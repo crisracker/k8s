@@ -19,9 +19,11 @@ These are not found in the default Ubuntu repositories, so let us set up kuberne
 
 ```cmd
 
-sudo apt -y install curl apt-transport-https
+sudo apt -y install curl apt-transport-https ca-certificates
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://dl.k8s.io/apt/doc/apt-key.gpg
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 ```
 
@@ -29,7 +31,7 @@ Then install the required packages.
 
 ```cmd
 
-sudo apt update
+sudo apt-get update -y
 sudo apt -y install vim git curl wget kubelet=1.26.9-00 kubeadm=1.26.9-00 kubectl=1.26.9-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
@@ -321,6 +323,7 @@ If you don’t have a shared DNS endpoint, use this command:
 
 sudo kubeadm init \
   --pod-network-cidr=10.10.0.0/16
+  --ignore-preflight-errors Swap
 
 ```
 
@@ -464,27 +467,32 @@ In this guide we will configure Calico.
 
 Calico is a networking and network policy provider. Calico supports a flexible set of networking options so you can choose the most efficient option for your situation, including non-overlay and overlay networks, with or without BGP. Calico uses the same engine to enforce network policy for hosts, pods, and (if using Istio & Envoy) applications at the service mesh layer.
 
-Install the Tigera Calico operator and custom resource definitions.
+Install Calico Network Plugin for Pod Networking
 
 ```cmd
 
-kubectl create -f https://projectcalico.docs.tigera.io/manifests/tigera-operator.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/tigera-operator.yaml
+
 
 ```
 
-Install Calico by creating the necessary custom resource. 
-
 ```cmd
 
-kubectl create -f https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/custom-resources.yaml -O
 
 ```
 
-Confirm that all of the pods are running with the following command.
+```cmd
+
+kubectl create -f custom-resources.yaml
+
+```
+
+Confirm that the pods in kube-system namespace, you will see calico pods and running CoreDNS pods.
 
 ```cmd
 
-watch kubectl get pods -ncalico-system
+watch kubectl get pods -n kube-system
 
 ```
 
