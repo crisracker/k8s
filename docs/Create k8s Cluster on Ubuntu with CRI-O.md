@@ -540,19 +540,25 @@ Update config file
 
 ```cmd
 
-vi /etc/ssh/sshd_config
+sudo vi /etc/ssh/sshd_config
 
 ```
 
 PasswordAuthentication --> change to Yes
 
-restart service -- > systemctl restart sshd
+Restart SSHD service
+
+```cmd
+
+sudo systemctl restart sshd
+
+```
 
 Copy admin.conf from Master to Worker node
 
 ```cmd
 
-sudo scp admin.conf chris@k8s-worker1:/home/chris
+sudo scp /etc/kubernetes/admin.conf chris@k8s-worker1:/home/chris
 
 ```
 
