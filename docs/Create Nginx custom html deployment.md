@@ -1,6 +1,6 @@
-#Create Nginx with custom html deployment
+# Create Nginx with custom html deployment
 
-##Create a Nginx deployment
+## Create a Nginx deployment
 
 ```cmd
 
@@ -8,7 +8,7 @@ kubectl create deployment ct-nginx --image=nginx --replicas=3 --port=80
 
 ```
 
-##Create a NodePort service to the deployment
+## Create a NodePort service to the deployment
 
 We will add a NodePort service which will allow traffic from outside into the K8s cluster. It provides a layer of abstraction and allows the client to communicate with the service without knowledge of the application running on multiple pods. The following command will expose the deployment externally.
 
@@ -34,7 +34,7 @@ kubectl get rs
 
 ```
 
-##Create a ConfigMap
+## Create a ConfigMap
 
 The next step is to create a ConfigMap. We will generate a ConfigMap file that will contain our custom HTML. The example below shows our completed file.
 
@@ -71,7 +71,7 @@ kubectl edit deployment ct-nginx
 
 ```
 
-##Attach the configMap to the deployment
+## Attach the configMap to the deployment
 
 ```cmd
 
