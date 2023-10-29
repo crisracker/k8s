@@ -111,6 +111,8 @@ spec:
 
 The below is added to the deployment.
 
+```cmd
+
 spec:
       containers:
       - image: nginx
@@ -128,6 +130,10 @@ spec:
         configMap:
           name: ct-html-configmap
 
+```
+
+```
+
 #1
 volumeMounts:
           - name: nginx-index-file
@@ -137,5 +143,7 @@ volumes:
       - name: nginx-index-file
         configMap:
           name: ct-html-configmap
+
+```
 
 Refresh the webpage and you should see the custom page
