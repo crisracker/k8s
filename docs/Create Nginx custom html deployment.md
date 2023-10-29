@@ -133,7 +133,6 @@ spec:
 ```
 
 ```
-
 #1
 volumeMounts:
           - name: nginx-index-file
@@ -143,7 +142,7 @@ volumes:
       - name: nginx-index-file
         configMap:
           name: ct-html-configmap
-
 ```
+
 
 Refresh the webpage and you should see the custom page
