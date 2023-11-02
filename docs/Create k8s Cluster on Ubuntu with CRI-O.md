@@ -328,9 +328,7 @@ If you don’t have a shared DNS endpoint, use this command:
 
 ```cmd
 
-sudo kubeadm init \
-  --pod-network-cidr=10.10.0.0/16
-  --ignore-preflight-errors Swap
+sudo kubeadm init --pod-network-cidr=10.10.0.0/16 --ignore-preflight-errors Swap
 
 ```
 
