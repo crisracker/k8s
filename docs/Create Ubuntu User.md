@@ -1,8 +1,16 @@
-# Add user to Ubuntu
+## Add user to Ubuntu
 
 ```cmd
 
 adduser xxx
+
+```
+
+# Assign password to existing user to Ubuntu
+
+```cmd
+
+passwd <username>
 
 ```
 
