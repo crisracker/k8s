@@ -565,7 +565,7 @@ Deploy sample Nginx application
 
 ```cmd
 
-kubectl create deploy nginx --image nginx:latest
+kubectl create deploy nginx --image nginx:latest --replicas=3
 
 ```
 
