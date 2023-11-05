@@ -6,7 +6,7 @@ adduser xxx
 
 ```
 
-# Assign password to existing user to Ubuntu
+## Assign password to existing user to Ubuntu
 
 ```cmd
 
