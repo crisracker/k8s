@@ -53,6 +53,8 @@ Install a specific version
 
 apt install -y kubeadm=<version> kubelet=<version> kubectl=<version>
 
+apt install -y kubeadm=1.26.7-00 kubelet=1.26.7-00 kubectl=1.26.7-00
+
 ```
 
 To downgrade the kubernetes version
