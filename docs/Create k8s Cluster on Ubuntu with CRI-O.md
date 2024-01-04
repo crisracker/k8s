@@ -51,9 +51,9 @@ Install a specific version
 
 ```cmd
 
-apt install -y kubeadm=<version> kubelet=<version> kubectl=<version>
+sudo apt install -y kubeadm=<version> kubelet=<version> kubectl=<version>
 
-apt install -y kubeadm=1.26.7-00 kubelet=1.26.7-00 kubectl=1.26.7-00
+sudo apt install -y kubeadm=1.26.7-00 kubelet=1.26.7-00 kubectl=1.26.7-00
 
 ```
 
